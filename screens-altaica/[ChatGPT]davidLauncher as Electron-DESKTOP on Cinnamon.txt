@@ -1,0 +1,21 @@
+"Can an Electron app replace Cinnamon's desktop?"
+
+Yes, it is possible to replace the Cinnamon desktop with an Electron app. Electron is a framework for building desktop applications with web technologies like HTML, CSS, and JavaScript. With Electron, you can create a desktop app that looks and behaves like a traditional desktop environment, including a desktop background, icons, and a taskbar or dock.
+
+To replace the Cinnamon desktop with an Electron app, you would need to disable the Cinnamon desktop and configure the app to launch at startup instead. You could then design the app to look and behave like a traditional desktop environment, including a customizable desktop background, icons, and a taskbar or dock. However, keep in mind that creating a full desktop environment with Electron would require a significant amount of development effort, and you may encounter performance and usability issues.
+
+"I didn't mean a full desktop environment.
+
+I want to still use Cinnamon as the desktop environment.
+
+You should note that Cinnamon, through Nemo, supports apps that use the _NET_WM_WINDOW_TYPE_DESKTOP-type windows to replace the desktop.
+
+My idea is an Electron app using the _NET_WM_WINDOW_TYPE_DESKTOP thing so it can act as the desktop in Cinnamon."
+
+Yes, it is possible to create an Electron app that can act as a desktop replacement in Cinnamon using the _NET_WM_WINDOW_TYPE_DESKTOP window type.
+
+To do this, you would need to create a main Electron application window with the _NET_WM_WINDOW_TYPE_DESKTOP property set. This can be achieved using the xprop command in the Linux terminal, followed by clicking on the Electron app window and setting the WM_WINDOW_TYPE property to ATOM and "_NET_WM_WINDOW_TYPE_DESKTOP" value.
+
+Once you have the main Electron app window set up as a desktop window, you can customize the app to show a custom background image or wallpaper and add shortcuts to commonly used apps or folders on the desktop. You can also create a tray icon or a dock to provide easy access to running applications.
+
+It's worth noting that this approach may have some limitations compared to using the default Cinnamon desktop. For example, you may not be able to use some of the Cinnamon-specific desktop features, and the performance may be affected by running a large Electron app as the desktop.
